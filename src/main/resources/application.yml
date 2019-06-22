@@ -1,0 +1,18 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /sell
+
+spring:
+  druid:
+    url: jdbc:mysql://192.168.1.177:3306/sell?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT
+    driveClass: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    maxActive: 30
+    maxWait: 10000
+  jpa:
+    show-sql: true
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss  #日期格式化标准
+    default-property-inclusion: non_null  #返回json时 忽略null
